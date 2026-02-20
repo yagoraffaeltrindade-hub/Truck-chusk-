@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Truck Chusk Panel</title>
+
+<style>
+body{
+    margin:0;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(160deg,#0a0000,#1a0000,#000);
+    font-family:Arial, Helvetica, sans-serif;
+    color:white;
+}
+
+.panel{
+    width:320px;
+    background:rgba(20,0,0,0.85);
+    border:2px solid red;
+    border-radius:18px;
+    box-shadow:0 0 25px red;
+    padding:20px;
+}
+
+.title{
+    text-align:center;
+    font-size:28px;
+    font-weight:bold;
+    color:#ff2a2a;
+    margin-bottom:15px;
+    text-shadow:0 0 10px red;
+}
+
+.option{
+    background:#120000;
+    padding:12px;
+    margin:8px 0;
+    border-radius:10px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    border:1px solid #ff0000;
+}
+
+.toggle{
+    width:45px;
+    height:22px;
+    background:#300000;
+    border-radius:20px;
+    position:relative;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.toggle::after{
+    content:"";
+    width:18px;
+    height:18px;
+    background:white;
+    border-radius:50%;
+    position:absolute;
+    top:2px;
+    left:2px;
+    transition:0.3s;
+}
+
+.toggle.active{
+    background:red;
+}
+
+.toggle.active::after{
+    left:24px;
+}
+
+.inject{
+    width:100%;
+    padding:12px;
+    margin-top:15px;
+    border:none;
+    border-radius:12px;
+    background:red;
+    color:white;
+    font-weight:bold;
+    font-size:16px;
+    cursor:pointer;
+    box-shadow:0 0 15px red;
+    transition:0.3s;
+}
+
+.inject:hover{
+    background:#ff3b3b;
+    transform:scale(1.05);
+}
+</style>
+</head>
+
+<body>
+
+<div class="panel">
+    <div class="title">TRUCK CHUSK</div>
+
+    <div class="option">Assistência de Mira <div class="toggle" onclick="this.classList.toggle('active')"></div></div>
+    <div class="option">Precisão Alta <div class="toggle" onclick="this.classList.toggle('active')"></div></div>
+    <div class="option">Estabilidade <div class="toggle" onclick="this.classList.toggle('active')"></div></div>
+
+    <button class="inject" onclick="alert('Função apenas visual 😄')">
+        INJETAR
+    </button>
+</div>
+
+</body>
+</html>
